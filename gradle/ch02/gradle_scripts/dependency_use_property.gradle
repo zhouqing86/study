@@ -1,0 +1,6 @@
+task first << { task ->
+	println "Run ${task.name}"
+}
+task second(dependsOn:["first"]) << { task ->
+	println "Run ${task.name}"
+}
